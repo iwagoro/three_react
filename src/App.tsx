@@ -1,15 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import GeoTexture from "./GeoTexture";
+import { GeoBox } from "./GeoBox";
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
-        <>
-            <div className="bg-red-400">aeiuo</div>
-        </>
+        <div className="w-full h-screen">
+            <Canvas shadows>
+                <ambientLight intensity={1} />
+                <GeoTexture />
+                <OrbitControls />
+            </Canvas>
+        </div>
     );
 }
 
